@@ -1,0 +1,24 @@
+{
+	"ImportPath": "app",
+	"GoVersion": "go1.5.1",
+	"Deps": [
+		{
+			"ImportPath": "github.com/Azure/azure-sdk-for-go/storage",
+			"Comment": "v1.2-263-g9f40dc1",
+			"Rev": "9f40dc1ee704920d20418200ddf6ec382456bb0e"
+		},
+		{
+			"ImportPath": "github.com/aymerick/raymond",
+			"Comment": "v1.1.0-3-g4785153",
+			"Rev": "47851533fc30927196d3c9d41b854980d11b08a2"
+		},
+		{
+			"ImportPath": "github.com/gorilla/context",
+			"Rev": "1c83b3eabd45b6d76072b66b746c20815fb2872d"
+		},
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Rev": "48e889f422c9702f924e53b095546239a1253159"
+		}
+	]
+}
