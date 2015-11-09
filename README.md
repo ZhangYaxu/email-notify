@@ -4,5 +4,27 @@ The email notification service consumes and processess messages from a queue in 
 ##RabbitMQ Processor
 Clients will publish messages for sending notifications in a queue.  The serive will consume these messages and process the various notifications.
 
+Example payload
+```json
+{
+  "recipients": [
+    "test@krillan.com",
+    "test2@krillan.com"
+  ],
+  "subject": "Some message subject",
+  "templateId": "order-thankyou",
+  "data": {}
+}
+```
+
 ##Management API
 A management API is used to list, add, edit, and delete templates.  In addition to managing templates, consumers will need to be able to view rendered templates used for editing and testing templates.
+
+| URL | METHOD | DESCRIPTION |
+| --- | --- | --- |
+| /template | GET | Returns a list of templates |
+| /template/:id | GET | Returns template details by id |
+| /template/:id | PUT | Add or update a template |
+| /template/:id | DELETE | Delete a template |
+| /template/:id/view | POST | View a template using the posted data |
+| /template/:id/view?format=pdf | POST | View a template using posted data as PDF attachment |
