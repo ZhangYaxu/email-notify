@@ -2,8 +2,8 @@ FROM golang:1.5.1
 
 EXPOSE 8000
 
-ADD . /go
+COPY . /usr/src/app
 
-RUN go install piccolo
+RUN go get -d -v && go install -v
 
-ENTRYPOINT /go/bin/piccolo
+CMD ["app"]
